@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // Components
 import Test from '../../components/test/Test';
 import Button from '../../components/button/Button';
+import Aside from '../../components/aside/Aside';
 import Card from '../../components/card/Card';
 import Carrousel from '../../components/carrousel/Carrousel';
 import Comment from '../../components/comment/Comment';
@@ -110,6 +111,30 @@ class Playground extends Component {
                 <article id="comment">
                     <h3>Comment Component</h3>
                     <Comment />
+                </article>
+
+                <article>
+                    <h3>Aside Component</h3>
+                    <Aside
+                        items={[
+                            {
+                                id: 1,
+                                title:'titulo1',
+                                img: 'https://www.hola.com/imagenes/estar-bien/20180831128704/ronroneo-gatos-causas/0-595-638/gato-ronroneo-1-t.jpg?filter=w600&filter=ds75'
+                            },
+                            {
+                                id: 2,
+                                title:'titulo2',
+                                img: 'https://www.hola.com/imagenes/estar-bien/20180831128704/ronroneo-gatos-causas/0-595-638/gato-ronroneo-1-t.jpg?filter=w600&filter=ds75'
+                            },
+                            {
+                               id: 3,
+                               title: 'Titulo 3',
+                               img: 'https://ichef.bbci.co.uk/news/410/cpsprodpb/8536/production/_103520143_gettyimages-908714708.jpg' 
+                            }
+                        ]}
+                    />
+                    <h4>Propiedades</h4>
                 </article>
 
                 <article id="inputElement">
