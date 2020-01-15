@@ -16,8 +16,8 @@ const Carrousel = (props) => {
                                 <Link to={path}>
                                     <h1>{title}</h1>
                                     <h3> {description} </h3>
-                                    <img src= {imgName} className="d-block w-100" alt="..." />
                                 </Link>
+                                    <img src= {imgName} className="d-block w-100" alt="..." />
                                 <h5>{description}</h5>
                                 
                             </div>
