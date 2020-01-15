@@ -4,6 +4,7 @@ import { get } from '../../utils/services';
 
 // Components
 import Comment from '../../components/comment/Comment';
+import Carrousel from '../../components/carrousel/Carrousel';
 
 class Detail extends Component {
     constructor(props) {
@@ -21,8 +22,10 @@ class Detail extends Component {
                 });
             });
     }
+    
     render() {
-        const { article: { title, copete, description } } = this.state;
+        const { article: { title, copete, description, image, id } } = this.state;
+        console.log(this.state.article)
         return (
             <div>
                 <div>
@@ -36,21 +39,28 @@ class Detail extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-9">
-                            Carousel
-                        </div>
-                        <div className="col-3">
-                            Aside
+                        <div className="col-10 mx-auto">
+                            <Carrousel 
+                                items={[{
+                                    imgName: image,
+                                    path: `http://localhost:3000/articles/${id}`
+                                }]}
+                            />
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-9">
                             {description}
                         </div>
+                        <div className="col-3">
+                            Aside
+                        </div>
                     </div>
                     <div className="row">
-                        <div className="col-12">
+                        <div className="col-10 mx-auto">
+                            <h3 className="">Comentarios</h3>
                             <Comment />
+                            />
                         </div>
                     </div>
                 </div>
