@@ -39,7 +39,7 @@ class Detail extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-10 mx-auto">
+                        <div className="col-12">
                             <Carrousel 
                                 items={[{
                                     imgName: image,
@@ -58,9 +58,8 @@ class Detail extends Component {
                     </div>
                     <div className="row">
                         <div className="col-10 mx-auto">
-                            <h3 className="">Comentarios</h3>
+                            <h3 className="my-5">Comentarios</h3>
                             <Comment />
-                            />
                         </div>
                     </div>
                 </div>
