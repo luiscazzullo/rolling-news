@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import './styles.css';
 
 const InputElement = ({
@@ -43,5 +44,16 @@ const InputElement = ({
         </>
     );
 };
+
+InputElement.propTypes = {
+    label: PropTypes.string,
+    type: PropTypes.string,
+    id: PropTypes.string,
+    placeholder: PropTypes.string,
+    description: PropTypes.string,
+    handleOnChange: PropTypes.func,
+    onLeft: PropTypes.bool,
+    value: PropTypes.string
+}
 
 export default InputElement;
