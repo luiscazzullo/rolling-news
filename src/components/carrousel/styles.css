@@ -1,7 +1,13 @@
 .carousel-control-next, .carousel-control-prev {
-    height: 30px;
+    height: 40px;
     margin-top: 50%;
-    width: 30px;
-    background: red;
+    width: 40px;
+    background: #C7C9C9;
     border-radius: 150rem;
+}
+
+.imgCarrousel{
+    background-color: rgb(255, 254, 254);
+    width: auto;
+    height: 500px;
 }

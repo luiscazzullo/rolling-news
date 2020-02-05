@@ -1,22 +1,25 @@
 import React from 'react';
-import '../../components/card/style.css';
+import { Link } from 'react-router-dom';
+import './style.css';
 
 
-const Card = ({ title, subTitle, someText, cardLink, date }) => {
+const Card = ({ title, subTitle, someText, cardLink, date, img }) => {
     return (
-        <div>
-            <div className='card col-xs-12 col-sm-9 col-md-6 col-lg-3' style={{background: 'light', width: '18rem' }}>
+            <div className="card mb-2 CardNews">
                 <div className="card-body">
-                    <h5 className="card-title">{ title }</h5>
-                    <img src="https://cnet1.cbsistatic.com/img/jerqdm92TwXKKfPjnNpO0gIK5VE=/868x488/2019/08/14/71b1ffaf-a502-42c4-94d5-2bb3da0444fe/samsung-galaxy-a20-1.jpg" className="card-img-top" className="img-fluid"/>
-                    <h6 className="card-subtitle mb-2 text-muted subtitle"> { subTitle } </h6>
+                    <Link className="card-link" to={cardLink}>
+                        <h5 className="card-title">{ title }</h5>
+                    </Link>
+                    <img src={img} className="card-img-top imgCard img-fluid"/>
+                    <p>{ subTitle }</p>
                     <p className="card-text">{ someText }</p>
-                    <a href="#" className="card-link">{ cardLink }</a>
-                    <a href="#" className="card-link">{ date }</a>
-                    
+                    <div className="d-flex justify-content-between">
+                        <div>
+                        <p className="card-text text-right"><small>{date}</small></p>
+                        </div>
+                    </div>                                      
                 </div>
             </div>
-        </div>
     );
 }
 

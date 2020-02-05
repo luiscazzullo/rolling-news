@@ -1,38 +1,25 @@
 import React from 'react';
 import { render } from 'react-dom'; // ReactDOM.render
 
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 // Views
 import Home from './views/home/Home';
 import Detail from './views/detail/Detail';
 import Login from './views/login/Login';
 import Articles from './views/articles/Articles';
 import Playground from './views/playground/Playground';
+import Footer from './components/footer/Footer';
+import Article from './views/article/Article';
 
 // Styles
 import './main.css';
+import Header from './components/header/Header';
 
 const App = () => {
   return (
-    <div id="menu">
+    <>
       <Router>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/detail/1">Detail</Link>
-          </li>
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
-          <li>
-            <Link to="/articles">Articles</Link>
-          </li>
-          <li>
-            <Link to="/playground">Playground</Link>
-          </li>
-        </ul>
+        <Header />
         <Route path="/" exact>
           <Home />
         </Route>
@@ -45,11 +32,27 @@ const App = () => {
         <Route path="/articles">
           <Articles />
         </Route>
+        <Route path="/article" exact>
+          <Article />
+        </Route>
+        <Route path="/article/:id" exact>
+          <Article />
+        </Route>
         <Route path="/playground">
           <Playground />
         </Route>
+        <Route path="/actualidad">
+          <Home />
+        </Route>
+        <Route path="/policiales">
+          <Home />
+        </Route>
+        <Route path="/deportes">
+          <Home />
+        </Route>
       </Router>
-    </div>
+      <Footer />
+    </>
   );
 };
 

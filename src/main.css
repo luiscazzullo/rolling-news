@@ -18,3 +18,11 @@
     border: 1px solid #ccc;
     margin-bottom: 10px;
 }
+
+textarea.form-control {
+    height: 250px;
+}
+
+.imglogo {
+        width: 35px; height: 35px;
+}
